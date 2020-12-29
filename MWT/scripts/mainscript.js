@@ -25,6 +25,7 @@ function calculateMinimalWay() {
     resultcolorText.textContent = "Оба цвета";
     resultColor.style.background = randomColor1.style.background;
     resultColor.style.left = '50%';
+    resultColor.style.visibility = 'visible';
     secondResultColor.style.background = randomColor2.style.background;
  }
 
@@ -36,6 +37,7 @@ function calculateMinimalWay() {
     resultcolorText.textContent = "Первый цвет";
     resultColor.style.background = randomColor1.style.background;
     resultColor.style.left = '46.5%';
+    resultColor.style.visibility = 'visible';
     secondResultColor.style.visibility = 'hidden';
  }
 
