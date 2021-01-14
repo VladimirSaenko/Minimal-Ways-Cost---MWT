@@ -256,3 +256,4 @@ getRandomColors();
 ifEqualyColors();
 getRandomCostWays();
 ifEgualyRandomCostWay()
+
