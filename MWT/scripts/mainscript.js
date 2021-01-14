@@ -91,7 +91,6 @@ function calculateMinimalWay() {
             resultColor.style.visibility = 'hidden';
             secondResultColor.style.visibility = 'hidden';
             resultcolorText.style.visibility = 'hidden';
-            alert(way1 + "and" + way2);
          }
         
          if(userLim.value < 0) {
@@ -174,7 +173,6 @@ function calculateMinimalWay() {
             resultColor.style.visibility = 'hidden';
             secondResultColor.style.visibility = 'hidden';
             resultcolorText.style.visibility = 'hidden';
-            alert(way1 + "and" + way2);
          }
         
          if(userLim.value < 0) {
@@ -257,7 +255,6 @@ function calculateMinimalWay() {
                 resultColor.style.visibility = 'hidden';
                 secondResultColor.style.visibility = 'hidden';
                 resultcolorText.style.visibility = 'hidden';
-                alert(way1 + "and" + way2);
              }
             
              if(userLim.value < 0) {
@@ -339,7 +336,6 @@ function calculateMinimalWay() {
                 resultColor.style.visibility = 'hidden';
                 secondResultColor.style.visibility = 'hidden';
                 resultcolorText.style.visibility = 'hidden';
-                alert(way1 + "and" + way2);
              }
             
              if(userLim.value < 0) {
@@ -421,7 +417,6 @@ function calculateMinimalWay() {
                 resultColor.style.visibility = 'hidden';
                 secondResultColor.style.visibility = 'hidden';
                 resultcolorText.style.visibility = 'hidden';
-                alert(way1 + "and" + way2);
              }
             
              if(userLim.value < 0) {
@@ -503,7 +498,6 @@ function calculateMinimalWay() {
                 resultColor.style.visibility = 'hidden';
                 secondResultColor.style.visibility = 'hidden';
                 resultcolorText.style.visibility = 'hidden';
-                alert(way1 + "and" + way2);
              }
             
              if(userLim.value < 0) {
@@ -585,7 +579,6 @@ function calculateMinimalWay() {
                 resultColor.style.visibility = 'hidden';
                 secondResultColor.style.visibility = 'hidden';
                 resultcolorText.style.visibility = 'hidden';
-                alert(way1 + "and" + way2);
              }
             
              if(userLim.value < 0) {
@@ -666,7 +659,6 @@ function calculateMinimalWay() {
              resultColor.style.visibility = 'hidden';
              secondResultColor.style.visibility = 'hidden';
              resultcolorText.style.visibility = 'hidden';
-             alert(way1 + "and" + way2);
           }
          
           if(userLim.value < 0) {
