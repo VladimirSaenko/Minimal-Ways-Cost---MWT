@@ -598,6 +598,87 @@ function calculateMinimalWay() {
              }
              getRandomCostWays();
         }
+        else {
+         colorcost1 = getRandomInt(0,randomLimits.value);
+         colorcost2 = getRandomInt(0,randomLimits.value);
+         taxcost1 = getRandomInt(0,randomLimits.value);
+         taxcost2 = getRandomInt(0,randomLimits.value);
+         way1 = colorcost1 + taxcost1;
+         way2 = colorcost2 + taxcost2;
+         if(userLim.value > way1 && userLim.value > way2) {
+             hiddenResultForm.style.visibility = 'visible';
+             closeButton.style.visibility = 'visible';
+             resultText.textContent = "Ваш лимит позволяет вам воспользоваться обеями путями на ваш выбор";
+             resultcolorText.textContent = "Оба цвета";
+             resultcolorText.style.visibility = 'visible';
+             resultColor.style.background = randomColor1.style.background;
+             resultColor.style.left = '50%';
+             resultColor.style.visibility = "visible";
+             secondResultColor.style.visibility = "visible";
+             secondResultColor.style.background = randomColor2.style.background;
+          }
+         
+          if(way1 < way2 && userLim.value >= way1 && userLim.value < way2) {
+             hiddenResultForm.style.visibility = 'visible';
+             closeButton.style.visibility = 'visible';
+             let wayColor1 = randomColor1.style.background;
+             resultText.textContent = "Первый путь за " + way1 + " до магазина с краской- " + wayColor1 +
+             " самый минимальный для вашего лимита";
+             resultcolorText.style.visibility = "visible";
+             resultcolorText.textContent = "Первый цвет";
+             resultColor.style.background = randomColor1.style.background;
+             resultColor.style.left = '46.5%';
+             resultColor.style.visibility = 'visible';
+             secondResultColor.style.visibility = 'hidden';
+          }
+         
+          if(way2 < way1 && userLim.value >= way2 && userLim.value < way1) {
+             hiddenResultForm.style.visibility = 'visible';
+             closeButton.style.visibility = 'visible';
+             let wayColor2 = randomColor2.style.background;
+             resultText.textContent = "Второй путь за " + way2 + " до магазина с краской- " + wayColor2 +  
+             "; самый минимальный для вашего лимита";
+             resultcolorText.textContent = "Второй цвет";
+             resultcolorText.style.visibility = "visible";
+             resultColor.style.background = randomColor2.style.background;
+             resultColor.style.left = '46.5%';
+             resultColor.style.visibility = 'visible';
+             secondResultColor.style.visibility = 'hidden';
+          }
+         
+          if(way1 == way2 && userLim.value > way1 && way2) {
+             hiddenResultForm.style.visibility = 'visible';
+             closeButton.style.visibility = 'visible';
+             resultText.textContent = "Ваш лимит позволяет вам воспользоваться обеями путями на ваш выбор";
+             resultcolorText.textContent = "Оба цвета";
+             resultcolorText.style.visibility = 'visible';
+             resultColor.style.background = randomColor1.style.background;
+             resultColor.style.left = '50%';
+             resultColor.style.visibility = "visible";
+             secondResultColor.style.visibility = "visible";
+             secondResultColor.style.background = randomColor2.style.background;
+          }
+         
+          if(userLim.value < way1 && userLim.value < way2 || userLim.value == 0) {
+             hiddenResultForm.style.visibility = 'visible';
+             closeButton.style.visibility = 'visible';
+             resultText.textContent = 'Ваш лимит очень маленький';
+             resultColor.style.visibility = 'hidden';
+             secondResultColor.style.visibility = 'hidden';
+             resultcolorText.style.visibility = 'hidden';
+             alert(way1 + "and" + way2);
+          }
+         
+          if(userLim.value < 0) {
+             hiddenResultForm.style.visibility = 'visible';
+             closeButton.style.visibility = 'visible';
+             resultText.textContent = 'Ваш лимит минусовой, напишете число больше 0';
+             resultColor.style.visibility = 'hidden';
+             secondResultColor.style.visibility = 'hidden';
+             resultcolorText.style.visibility = 'hidden';
+          }
+          getRandomCostWays(); 
+        }
 }
 
 function getRandomColors() {
