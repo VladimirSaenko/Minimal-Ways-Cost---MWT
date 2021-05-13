@@ -1,4 +1,4 @@
-# Minimal Ways Cost | MWT
+# Minimal-Way-site
 
 Portfolio-2 {
 
