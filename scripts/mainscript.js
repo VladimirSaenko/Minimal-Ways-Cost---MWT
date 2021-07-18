@@ -1,5 +1,5 @@
 
-"use strict"
+"use strict";
 
 let userLim = document.getElementById('limit');
 let resultForm = document.getElementById('form');
@@ -31,7 +31,6 @@ function mainFunc() {
         calculateMinimalWay();
         getRandomCostWays();
     }
-
     if(rangeRandom.value == 1000) {
         colorcost1 = getRandomInt(100,1000);
         colorcost2 = getRandomInt(100,1000);
@@ -42,7 +41,6 @@ function mainFunc() {
         calculateMinimalWay();
         getRandomCostWays();
    }
-
    if(rangeRandom.value == 50) {
        colorcost1 = getRandomInt(0,50);
        colorcost2 = getRandomInt(0,50);
@@ -53,7 +51,6 @@ function mainFunc() {
        calculateMinimalWay();
        getRandomCostWays();
    }
-
    if(rangeRandom.value == 500) {
        colorcost1 = getRandomInt(0,500);
        colorcost2 = getRandomInt(0,500);
@@ -64,7 +61,6 @@ function mainFunc() {
        calculateMinimalWay();
        getRandomCostWays();
    }
-
    if(rangeRandom.value == 250) {
        colorcost1 = getRandomInt(0,250);
        colorcost2 = getRandomInt(0,250);
@@ -75,7 +71,6 @@ function mainFunc() {
        calculateMinimalWay();
        getRandomCostWays();
    }
-
    if(rangeRandom.value == 300) {
        colorcost1 = getRandomInt(0,300);
        colorcost2 = getRandomInt(0,300);
@@ -86,7 +81,6 @@ function mainFunc() {
        calculateMinimalWay();
        getRandomCostWays();
     }
-
    if(rangeRandom.value == 10) {
        colorcost1 = getRandomInt(0,10);
        colorcost2 = getRandomInt(0,10);
@@ -97,7 +91,6 @@ function mainFunc() {
        calculateMinimalWay();
        getRandomCostWays();
     }
-
    else {
        colorcost1 = getRandomInt(0,rangeRandom.value);
        colorcost2 = getRandomInt(0,rangeRandom.value);
@@ -115,38 +108,32 @@ function calculateMinimalWay() {
         resultForm.style.visibility = 'visible';
         resultText.textContent = "Ваш лимит позволяет вам воспользоваться обеями путями";  
     }
-   
     if(way1 < way2 && userLim.value >= way1 && userLim.value < way2) {
         resultForm.style.visibility = 'visible';
         let wayColor1 = color1.style.background;
         resultText.textContent = "Первый путь за " + way1 + valuta + " с цветом- " + wayColor1 +
         " самый минимальный для вашего лимита";
-    }
-   
+    } 
     if(way2 < way1 && userLim.value >= way2 && userLim.value < way1) {
         resultForm.style.visibility = 'visible';
         let wayColor2 = color2.style.background;
         resultText.textContent = "Второй путь за " + way2 + valuta  + " с цветом- " + wayColor2 +  
         " самый минимальный для вашего лимита";
         resultcolorText.style.visibility = "visible";
-    }
-   
+    } 
     if(way1 == way2 && userLim.value > way1 && way2) {
         resultForm.style.visibility = 'visible';
         resultText.textContent = "Ваш лимит позволяет вам воспользоваться обеями путями";
         resultColor.style.visibility = "hidden";
-    }
-   
+    } 
     if(userLim.value < way1 && userLim.value < way2 || userLim.value == 0) {
         resultForm.style.visibility = 'visible';
         resultText.textContent = 'Ваш лимит очень маленький';
-    }
-   
+    } 
     if(userLim.value < 0) {
         resultForm.style.visibility = 'visible';
         resultText.textContent = 'Ваш лимит минусовой, напишете число больше 0 ';
     }
- 
     if(userLim.value == 0 && way1 == 0 && way2 == 0) {
         resultForm.style.visibility = 'visible';
         resultText.textContent = 'Введите лимит';
